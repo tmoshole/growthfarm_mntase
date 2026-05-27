@@ -7,41 +7,52 @@
       name="description"
       content="GrowthFarm Mntase is a South African community research and WhatsApp engagement platform connecting brands with everyday consumers."
     />
-    <title>GrowthFarm Mntase | Community Engagement Platform</title>
+    <meta name="theme-color" content="#0c2317" />
+    <title>GrowthFarm Mntase — Community Engagement, made human.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,30..100,0..1;1,9..144,300..700,30..100,0..1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="./index.html" aria-label="GrowthFarm Mntase home">
-        <span class="brand-mark">GF</span>
+        <span class="brand-mark" aria-hidden="true">GF</span>
         <span>
           <strong>GrowthFarm Mntase</strong>
-          <small>Community insights and engagement</small>
+          <small>Community insights &amp; engagement</small>
         </span>
       </a>
       <nav aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="./privacy.html">Privacy</a>
+        <a href="#services" data-testid="nav-services">Services</a>
+        <a href="#about" data-testid="nav-about">About</a>
+        <a href="#contact" data-testid="nav-contact">Contact</a>
+        <a href="./privacy.html" data-testid="nav-privacy">Privacy</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" data-testid="hero-section">
         <div class="hero-copy">
           <p class="eyebrow">South African community engagement</p>
-          <h1>GrowthFarm Mntase</h1>
+          <h1>
+            Communities,<br />
+            heard <span class="accent">honestly.</span>
+          </h1>
           <p class="lede">
-            We help organisations understand and serve communities through trusted local
-            networks, WhatsApp-first research, and practical consumer insight.
+            We help brands, NGOs, and public programmes understand and serve South African
+            communities through trusted local networks, WhatsApp-first research, and
+            consumer insight that respects every voice.
           </p>
           <div class="actions">
-            <a class="button primary" href="#contact">Contact us</a>
-            <a class="button secondary" href="#services">View services</a>
+            <a class="button primary" href="#contact" data-testid="hero-cta-contact">Start a conversation</a>
+            <a class="button secondary" href="#services" data-testid="hero-cta-services">Explore services</a>
           </div>
         </div>
-        <div class="hero-panel" aria-label="GrowthFarm Mntase summary">
+        <div class="hero-panel" aria-label="GrowthFarm Mntase summary" data-testid="hero-panel">
           <div>
             <span class="metric">WhatsApp-first</span>
             <p>Low-friction surveys, onboarding, feedback, and community updates.</p>
@@ -57,40 +68,43 @@
         </div>
       </section>
 
-      <section id="services" class="section">
+      <section id="services" class="section" data-testid="services-section">
         <div class="section-heading">
           <p class="eyebrow">What we do</p>
-          <h2>Services for brands, NGOs, and community programmes</h2>
+          <h2>Three ways to <span class="accent">reach &amp; learn</span> from real communities.</h2>
         </div>
         <div class="grid">
-          <article class="card">
+          <article class="card" data-testid="card-research">
             <h3>Community research</h3>
             <p>
               Short surveys, sentiment checks, product feedback, and audience learning
               gathered through mobile-friendly channels.
             </p>
+            <span class="tag">Insight · Surveys</span>
           </article>
-          <article class="card">
+          <article class="card" data-testid="card-whatsapp">
             <h3>WhatsApp engagement</h3>
             <p>
               Opt-in messaging journeys for onboarding, reminders, support, campaign
               participation, and follow-up communication.
             </p>
+            <span class="tag">Messaging · Journeys</span>
           </article>
-          <article class="card">
+          <article class="card" data-testid="card-activation">
             <h3>Local activation</h3>
             <p>
               Coordinator-supported community participation for campaigns, pilots,
               recruitment, and field learning.
             </p>
+            <span class="tag">On the ground</span>
           </article>
         </div>
       </section>
 
-      <section id="about" class="section split">
+      <section id="about" class="section dark split" data-testid="about-section">
         <div>
           <p class="eyebrow">About us</p>
-          <h2>Built for respectful access to real community voices.</h2>
+          <h2>Built for respectful access to <span class="accent">real voices.</span></h2>
         </div>
         <div class="body-copy">
           <p>
@@ -106,8 +120,9 @@
         </div>
       </section>
 
-      <section class="section trust">
+      <section class="section trust" data-testid="trust-section">
         <div>
+          <p class="eyebrow">The essentials</p>
           <h2>Business information</h2>
           <dl class="details">
             <div>
@@ -128,25 +143,27 @@
             </div>
           </dl>
         </div>
-        <aside class="notice">
+        <aside class="notice" data-testid="participant-notice">
           <h3>Participant notice</h3>
           <p>
             GrowthFarm Mntase does not sell participant contact details. People can
-            opt out of communications at any time by replying STOP or contacting us.
+            opt out of communications at any time by replying <strong>STOP</strong> or
+            contacting us directly.
           </p>
         </aside>
       </section>
 
-      <section id="contact" class="section contact">
+      <section id="contact" class="section contact" data-testid="contact-section">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Speak to GrowthFarm Mntase</h2>
+          <h2>Let's <span class="accent">talk.</span></h2>
           <p>
             For business, verification, privacy, or campaign questions, email
-            <a href="mailto:tshepo@growthfarm.co">tshepo@growthfarm.co</a>.
+            <a href="mailto:tshepo@growthfarm.co">tshepo@growthfarm.co</a>
+            — we read every message.
           </p>
         </div>
-        <a class="button primary" href="mailto:tshepo@growthfarm.co">Email us</a>
+        <a class="button primary" href="mailto:tshepo@growthfarm.co" data-testid="contact-email-btn">Email us</a>
       </section>
     </main>
 
